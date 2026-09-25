@@ -10,6 +10,7 @@ public record User(
         LocalDate birthdate,
         Role role
 ) {
+
     public enum Role {
         STUDENT,
         TEACHER
