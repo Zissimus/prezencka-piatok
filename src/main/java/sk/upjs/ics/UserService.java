@@ -11,6 +11,9 @@ public class UserService {
 
     GenderRatio calculateGenderRatio(){
         int noOfUsers = users.size();
+        if (users == null || noOfUsers == 0){
+            return new GenderRatio(0, 0, 0, 0);
+        }
         int boys = 0, girls = 0, other = 0, unknown = 0;
         for(User u : users){
             switch (u.gender()){
